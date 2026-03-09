@@ -14,12 +14,6 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: List files
-        run: ls -la
-
-      - name: List schemes
-        run: xcodebuild -list -project SIoP.xcodeproj
-
       - name: Build app without signing
         run: |
           xcodebuild \
@@ -27,5 +21,23 @@ jobs:
             -scheme SIoP \
             -configuration Debug \
             -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO \
             build
+
+      - name: Find built app
+        run: |
+          find build -name "*.app" -print
+
+      - name: Package app as IPA
+        run: |
+          mkdir -p Payload
+          APP_PATH=$(find build -name "SIoP.app" | head -n 1)
+          cp -R "$APP_PATH" Payload/
+          zip -r SIoP.ipa Payload
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SIoP-ipa
+          path: SIoP.ipa
