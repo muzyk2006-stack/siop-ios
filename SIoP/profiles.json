@@ -1,0 +1,62 @@
+[
+{
+    "name":"Dziecko",
+    "iconName":"child",
+    "fields":[ 
+        {"title":"W razie wypadku lub zagubienia proszę powiadomić:", "value":""},
+        {"title":"Ważne informacje:", "value":""}]
+},
+{
+    "name":"Osoba starsza",
+    "iconName":"old.man",
+    "fields":[
+        {"title":"W razie wypadku lub zagubienia proszę powiadomić:", "value":""},
+        {"title":"Wiek:","value":""},
+        {"title":"Waga:","value":""},
+        {"title":"Obecnie choruję na:","value":""},
+        {"title":"Przyjmowane leki:","value":""},
+        {"title":"Jestem uczulony (-na):","value":""},
+        {"title":"Grupa krwi:","value":""},
+        {"title":"Ważne informacje:","value":""}]
+},
+{
+    "name":"Motocyklista",
+    "iconName":"motorcycle",
+    "fields":[
+        {"title":"W razie wypadku proszę powiadomić:", "value":""},
+        {"title":"Wiek:","value":""},
+        {"title":"Waga:","value":""},
+        {"title":"Obecnie choruję na:","value":""},
+        {"title":"Przyjmowane leki:","value":""},
+        {"title":"Jestem uczulony (-na):","value":""},
+        {"title":"Grupa krwi:","value":""},
+        {"title":"Ważne informacje:","value":""}]
+},
+{
+    "name":"Zwierzęta",
+    "iconName":"dog",
+    "fields":[
+        {"title":"W razie znalezienia proszę o kontakt:", "value":""},
+        {"title":"Imię zwierzęcia:","value":""},
+        {"title":"Rasa:","value":""}]
+},
+{
+    "name":"Sportowiec",
+    "iconName":"ball",
+    "fields":[
+        {"title":"W razie wypadku proszę powiadomić:", "value":""},
+        {"title":"Wiek:","value":""},
+        {"title":"Waga:","value":""},
+        {"title":"Obecnie choruję na:","value":""},
+        {"title":"Przyjmowane leki:","value":""},
+        {"title":"Jestem uczulony (-na):","value":""},
+        {"title":"Grupa krwi:","value":""},
+        {"title":"Ważne informacje:","value":""}]
+},
+{
+    "name":"Samochód",
+    "iconName":"car",
+    "fields":[
+        {"title":"W razie szkody proszę powiadomić:", "value":""}]
+}
+]
