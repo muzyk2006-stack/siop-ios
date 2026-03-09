@@ -1,0 +1,32 @@
+name: Build iOS App
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          xcodebuild -project siop/SIoP.xcodeproj \
+          -scheme SIoP \
+          -configuration Release \
+          -archivePath build/SIoP.xcarchive \
+          archive
+
+      - name: Export IPA
+        run: |
+          xcodebuild -exportArchive \
+          -archivePath build/SIoP.xcarchive \
+          -exportOptionsPlist ExportOptions_AdHoc.plist \
+          -exportPath build
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v3
+        with:
+          name: SIoP
+          path: build/*.ipa
