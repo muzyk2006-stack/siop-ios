@@ -14,13 +14,16 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
+      - name: List files
+        run: ls -la
+
       - name: List schemes
-        run: xcodebuild -list -project siop/SIoP.xcodeproj
+        run: xcodebuild -list -project SIoP.xcodeproj
 
       - name: Build app without signing
         run: |
           xcodebuild \
-            -project siop/SIoP.xcodeproj \
+            -project SIoP.xcodeproj \
             -scheme SIoP \
             -configuration Debug \
             -destination 'generic/platform=iOS' \
