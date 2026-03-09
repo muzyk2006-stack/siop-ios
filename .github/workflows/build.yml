@@ -1,0 +1,28 @@
+name: Build SIoP iOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List schemes
+        run: xcodebuild -list -project siop/SIoP.xcodeproj
+
+      - name: Build app without signing
+        run: |
+          xcodebuild \
+            -project siop/SIoP.xcodeproj \
+            -scheme SIoP \
+            -configuration Debug \
+            -destination 'generic/platform=iOS' \
+            CODE_SIGNING_ALLOWED=NO \
+            build
