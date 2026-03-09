@@ -1,0 +1,20 @@
+[
+{
+    "name":"Mój profil",
+    "iconName":"profile",
+    "fields":[
+        {"title":"Nazwa i adres hotelu:","outputTitle":"Hotel Name and address:", "value":""},
+        {"title":"Imię i nazwisko:", "outputTitle":"First and last name:","value":""},
+        {"title":"Numer telefonu osoby do kontaktu:", "outputTitle":"Contact person's phone number:","value":""},
+        {"title":"Numer telefonu rezydenta:", "outputTitle":"Resident phone number:","value":""},
+        {"title":"Numer polisy ubezpieczeniowej:", "outputTitle":"Insurance policy number:","value":""},
+        {"title":"Numer telefonu ubezpieczyciela:", "outputTitle":"Insurer's telephone number:","value":""},
+        {"title":"Wiek:", "outputTitle":"Age:","value":""},
+        {"title":"Waga:", "outputTitle":"Weight:","value":""},
+        {"title":"Obecnie choruję na:", "outputTitle":"I am currently suffering from:","value":""},
+        {"title":"Przyjmowane leki:", "outputTitle":"Medications taken:","value":""},
+        {"title":"Jestem uczulony na:", "outputTitle":"I am allergic to:","value":""},
+        {"title":"Ważne informacje:", "outputTitle":"Important information:","value":""},
+    ]
+}
+]
